@@ -5,6 +5,7 @@
     --maroon: rgb(210, 39, 121);
     --purple: rgb(96, 40, 149);
     --navy: rgb(12, 30, 127);
+    --content-margin: 80px;
 }
 
 html, 
@@ -13,6 +14,8 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Orbitron', sans-serif;
+    color: white;
+    letter-spacing: 4px;
 }
 
 body {
@@ -27,6 +30,7 @@ body {
     background-size: 101%;
     position: relative;
     flex-shrink: 0;
+    box-shadow: 12px 12px 8px rgba(0, 0, 0, 0.5);
 }
 
 .logo-container {
@@ -43,14 +47,13 @@ body {
 
 .company-name {
     font-size: 60px;
-    color: white;
+    letter-spacing: 8px;
 }
 
 footer {
     position: absolute;
     right: 8px;
     bottom: 8px;
-    color: white;
 }
 
 img {
@@ -59,15 +62,109 @@ img {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    background-color: var(--maroon);
+    gap: 50px;
+    background: linear-gradient(135deg, var(--pink) 0%, var(--maroon) 20%, var(--purple) 60%, var(--navy) 100%);
+    padding: 100px 60px 0 60px;
 }
 
 .header {
-    padding: 60px; 
+    height: 120px;
 }
 
 .header>p {
-    text-align: center;
+    text-align: left;
+}
+
+.signup-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2;
+    height: 500px;
+    width: auto;
+}
+
+em {
+    font-size: 25px;
+}
+
+.info-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 100px;
+    flex: 1;
+}
+
+.signup-header {
+    margin: 0;
+    align-self: start;
+}
+
+.left-info, .right-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.right-info {
+    margin-right: 300px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    font-family: 'Orbitron', sans-serif;
+    width: 300px;
+    height: 30px;
+    border-color: var(--purple);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
     color: white;
+    padding: 2px 4px;
+    font-size: 20px;
+}
+
+input:invalid {
+    border-color: var(--pink);
+}
+
+input:focus {
+    outline: none !important;
+    border-color: aqua;
+    box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.7);
+}
+
+.require {
+    margin: 0;
+    margin-top: -20px;
+    font-size: 12px;
+    color: var(--pink);
+}
+
+.btn {
+    margin-top: 30px;
+    margin-left: -2px;
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--purple);
+    color: white;
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+
+.login>span {
+    color: var(--pink);
 }
